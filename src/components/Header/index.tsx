@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { IoIosArrowBack } from 'react-icons/io';
 import { HeaderPage, TopBarContainer, TitlePage } from './styles';
-import arrowBackPage from '../../assets/images/arrowBack.png';
 
 interface IHeaderProps {
   arrowBack?: boolean;
@@ -12,7 +12,7 @@ const Header: React.FC<IHeaderProps> = ({ arrowBack }) => (
     <TopBarContainer>
       {arrowBack && (
         <Link to="/">
-          <img src={arrowBackPage} alt="Back Page" />
+          <IoIosArrowBack size={50} color="#65AFFF" />
         </Link>
       )}
       <TitlePage>Notes</TitlePage>
