@@ -22,7 +22,7 @@ export const Notes = styled.li<INoteProps>`
 export const HeaderNote = styled.header<INoteProps>`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding: 0.5rem;
   width: 100%;
   border-radius: 0.8rem;
@@ -40,4 +40,14 @@ export const MessageNote = styled.div`
   p{
     font: 400 1.7rem Archivo;
   }
+`;
+
+export const Button = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border:0;
+  background: transparent;
+  cursor: pointer;
+  outline: 0;
 `;

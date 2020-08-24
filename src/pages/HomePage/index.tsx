@@ -10,12 +10,16 @@ import addIcon from '../../assets/images/add.png';
 function HomePage() {
   const [notes, setNotes] = useState([]);
 
-  useEffect(() => {
+  function dataStorage() {
     const notesStorage = localStorage.getItem('Notes');
     if (notesStorage) {
       const nt = JSON.parse(notesStorage);
       setNotes(nt);
     }
+  }
+  useEffect(() => {
+    dataStorage();
+    window.addEventListener('storage', dataStorage);
   }, []);
 
   return (
